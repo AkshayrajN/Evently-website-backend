@@ -34,8 +34,9 @@ if ($decodedData != null) {
                 $lname=$row['last_name'];
                 $email=$row['email'];
                 session_start();
-                $_SESSION['uname']=$uname;
-                $response = array('Status' => 200, 'message' => 'Succesfully loggedin','user'=>$uname,  "first_name"=>$fname,"last_name"=>$lname,'email'=>$email);
+                //$_SESSION['uname']=$uname;
+		$prof=$row['profile'];
+                $response = array('Status' => 200, 'message' => 'Succesfully loggedin','user'=>$uname,  "first_name"=>$fname,"last_name"=>$lname,'email'=>$email,'profile'=>$prof);
 
                     echo json_encode($response);
                     //  header("Location:http://localhost:443/Trail/Evently-Website/session_start.php");
