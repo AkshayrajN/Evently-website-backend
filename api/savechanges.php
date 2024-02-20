@@ -20,7 +20,7 @@ if ($decodedData != null) {
    $user= $decodedData['username'];
    $updatedProfile= $decodedData['profile'];
 
-   $query=" update evently column set profile='$updatedProfile' where username='$user'";
+   $query=" update users `column` set `profile`='$updatedProfile' where `username`='$user'";
 
    mysqli_query($con,$query);
 
